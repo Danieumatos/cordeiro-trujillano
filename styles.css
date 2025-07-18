@@ -329,35 +329,33 @@ p {
 
 /* Map Section */
 .map-section {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     text-align: center;
-    padding-top: 12px;
 }
 
 .map-section h2 {
-    margin-bottom: 20px;
     font-family: 'Merriweather', serif;
-    font-size: 2.1rem;
+    font-size: 2rem;
     color: #2d2d2d;
-    letter-spacing: 0.5px;
+    margin-bottom: 18px;
 }
 
-.map-section > div {
+.map-container {
     display: flex;
     justify-content: center;
 }
 
-.map-section iframe {
+.map-container iframe {
     border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
     max-width: 600px;
     width: 100%;
-    height: 340px;
+    height: 320px;
     border: 0;
     transition: box-shadow 0.3s;
 }
 
-.map-section iframe:hover {
+.map-container iframe:hover {
     box-shadow: 0 10px 32px rgba(0,0,0,0.18);
 }
 
@@ -383,6 +381,40 @@ p {
     footer .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .map-section {
+        margin-bottom: 32px;
+    }
+    .map-section h2 {
+        font-size: 1.3rem;
+    }
+    .map-container iframe {
+        max-width: 100vw;
+        height: 180px;
+        border-radius: 10px;
+    }
+    .logo-fixed {
+        height: 64px;
+        top: 12px;
+        left: 12px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+    .container {
+        width: 98%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .service-cards {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
     }
 }
 

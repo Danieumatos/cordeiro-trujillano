@@ -435,3 +435,19 @@ p {
     padding: 10px 18px;
     transition: box-shadow 0.3s;
 }
+
+@media (max-width: 600px) {
+    .logo-fixed {
+        height: 48px !important;
+        display: block !important;
+        margin: 0 auto 12px auto !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        padding: 0 !important;
+    }
+    .hero {
+        margin-top: 0 !important;
+        padding-top: 70px !important;
+    }
+}

@@ -12,8 +12,8 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #1a1a1a;
+    background-color: #f8f8f8;
     margin: 0;
     overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ a {
 }
 
 a:focus, button:focus {
-    outline: 2px solid #f39c12;
+    outline: 2px solid #d4af37;
     outline-offset: 2px;
 }
 
@@ -96,42 +96,41 @@ a:focus, button:focus {
     transform: translateY(0);
 }
 
-/* Header - LOGO CORRIGIDA */
+/* Header */
 .header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     transition: all 0.3s ease;
+    min-height: 120px; /* ALTURA MÍNIMA AUMENTADA */
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 20px; /* PADDING AUMENTADO */
+    min-height: 120px; /* ALTURA MÍNIMA PARA ACOMODAR LOGO */
 }
 
-/* LOGO COM MELHOR VISIBILIDADE */
+/* LOGO AJUSTADA PARA 100px */
 .logo-container .logo {
-    height: 90px;
+    height: 100px;
     width: auto;
     transition: all 0.3s ease;
-    /* Adicionando sombra sutil para melhor visibilidade */
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    /* Garantindo que a logo seja visível mesmo sendo transparente */
-    background: rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
     padding: 5px;
     border-radius: 8px;
 }
 
 .logo-container .logo:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.5));
 }
 
 .nav-menu {
@@ -147,7 +146,7 @@ a:focus, button:focus {
 }
 
 .nav-links a {
-    color: #2c3e50;
+    color: #ffffff;
     font-weight: 500;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -155,7 +154,7 @@ a:focus, button:focus {
 }
 
 .nav-links a:hover {
-    color: #f39c12;
+    color: #d4af37;
 }
 
 .nav-links a::after {
@@ -165,7 +164,7 @@ a:focus, button:focus {
     left: 0;
     width: 0;
     height: 2px;
-    background: #f39c12;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
     transition: width 0.3s ease;
 }
 
@@ -174,18 +173,19 @@ a:focus, button:focus {
 }
 
 .header-cta .btn-header {
-    background: linear-gradient(135deg, #8bc34a, #689f38);
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: #1a1a1a;
     padding: 12px 25px;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .header-cta .btn-header:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 195, 74, 0.4);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #b8941f, #9c7d1a);
 }
 
 /* Mobile Menu */
@@ -201,25 +201,25 @@ a:focus, button:focus {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #2c3e50;
+    background: #d4af37;
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
 }
 
-/* Hero Section - ALTURA CORRIGIDA PARA EVITAR SOBREPOSIÇÃO */
+/* Hero Section - PADDING SUPERIOR AUMENTADO */
 .hero {
-    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 20px 120px; /* PADDING INFERIOR CORRIGIDO */
+    padding: 160px 20px 120px; /* PADDING SUPERIOR AUMENTADO DE 120px PARA 160px */
     position: relative;
     overflow: hidden;
-    margin-bottom: 0; /* SEM MARGEM NEGATIVA */
+    margin-bottom: 0;
 }
 
 .hero::before {
@@ -229,7 +229,7 @@ a:focus, button:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05 )"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(212,175,55,0.05 )"/><circle cx="75" cy="75" r="1" fill="rgba(212,175,55,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     pointer-events: none;
 }
 
@@ -243,16 +243,17 @@ a:focus, button:focus {
     font-family: 'Merriweather', serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 20px;
-    color: #fff;
+    color: #d4af37;
     font-weight: 700;
     line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
     font-family: 'Merriweather', serif;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     margin-bottom: 20px;
-    color: #fff;
+    color: #ffffff;
     font-weight: 400;
     line-height: 1.3;
 }
@@ -262,11 +263,12 @@ a:focus, button:focus {
     margin-bottom: 40px;
     opacity: 0.95;
     line-height: 1.6;
+    color: #f0f0f0;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #8bc34a, #689f38);
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: #1a1a1a;
     padding: 18px 40px;
     border: none;
     border-radius: 50px;
@@ -276,15 +278,15 @@ a:focus, button:focus {
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.3);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(139, 195, 74, 0.4);
-    background: linear-gradient(135deg, #689f38, #558b2f);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #b8941f, #9c7d1a);
 }
 
 /* Section Headers */
@@ -295,8 +297,8 @@ a:focus, button:focus {
 
 .section-tag {
     display: inline-block;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: #1a1a1a;
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -304,31 +306,31 @@ a:focus, button:focus {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    position: relative; /* GARANTIR POSICIONAMENTO CORRETO */
-    z-index: 2; /* FICAR ACIMA DE OUTROS ELEMENTOS */
+    position: relative;
+    z-index: 2;
 }
 
 .section-header h2 {
     font-family: 'Merriweather', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #1a1a1a;
     line-height: 1.3;
 }
 
 .section-header p {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    color: #666;
+    color: #4a4a4a;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
 }
 
-/* About Section - TEXTO JUSTIFICADO E CAIXA BONITA */
+/* About Section */
 .about-section {
-    padding: 120px 20px 100px; /* PADDING SUPERIOR AUMENTADO */
-    background: #f5f5f5;
-    margin-top: 0; /* SEM SOBREPOSIÇÃO */
+    padding: 120px 20px 100px;
+    background: #f8f8f8;
+    margin-top: 0;
     position: relative;
     z-index: 1;
 }
@@ -336,14 +338,14 @@ a:focus, button:focus {
 .about-content-box {
     max-width: 1000px;
     margin: 0 auto;
-    background: #fff;
+    background: #ffffff;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     position: relative;
     overflow: hidden;
-    z-index: 2; /* GARANTIR QUE FIQUE ACIMA DO HERO */
+    z-index: 2;
 }
 
 .about-content-box::before {
@@ -353,21 +355,21 @@ a:focus, button:focus {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
+    background: linear-gradient(135deg, #d4af37, #b8941f);
 }
 
 .about-text p {
     font-size: clamp(1rem, 2vw, 1.1rem);
     line-height: 1.8;
     margin-bottom: 25px;
-    color: #555;
-    text-align: justify; /* TEXTO JUSTIFICADO */
-    text-indent: 2em; /* Indentação de parágrafo */
+    color: #333333;
+    text-align: justify;
+    text-indent: 2em;
 }
 
 .about-text p:first-child {
     font-weight: 500;
-    color: #2c3e50;
+    color: #1a1a1a;
 }
 
 .about-text p:last-child {
@@ -377,7 +379,15 @@ a:focus, button:focus {
 /* Services Section */
 .services-section {
     padding: 100px 20px;
-    background: #fff;
+    background: #1a1a1a;
+}
+
+.services-section .section-header h2 {
+    color: #d4af37;
+}
+
+.services-section .section-header p {
+    color: #cccccc;
 }
 
 .services-grid {
@@ -389,30 +399,31 @@ a:focus, button:focus {
 }
 
 .service-card {
-    background: #fff;
+    background: #2d2d2d;
     padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     text-align: center;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.4);
 }
 
 .service-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 25px auto;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
+    background: linear-gradient(135deg, #d4af37, #b8941f);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #1a1a1a;
     transition: all 0.3s ease;
 }
 
@@ -421,14 +432,14 @@ a:focus, button:focus {
 }
 
 .service-card h3 {
-    color: #2c3e50;
+    color: #d4af37;
     margin-bottom: 20px;
     font-size: 1.4rem;
     font-weight: 600;
 }
 
 .service-card p {
-    color: #666;
+    color: #cccccc;
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -436,7 +447,7 @@ a:focus, button:focus {
 /* Team Section */
 .team-section {
     padding: 100px 20px;
-    background: #f5f5f5;
+    background: #f8f8f8;
 }
 
 .team-grid {
@@ -448,17 +459,18 @@ a:focus, button:focus {
 }
 
 .team-member {
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .team-member:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
 }
 
 .member-photo {
@@ -468,70 +480,79 @@ a:focus, button:focus {
 .photo-placeholder {
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
+    background: linear-gradient(135deg, #d4af37, #b8941f);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .member-info h3 {
-    color: #2c3e50;
+    color: #1a1a1a;
     margin-bottom: 10px;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .member-oab {
-    color: #f39c12;
+    color: #d4af37;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .member-specialty {
-    color: #666;
+    color: #4a4a4a;
     margin-bottom: 15px;
     font-style: italic;
 }
 
 .member-email {
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 .member-email:hover {
-    color: #f39c12;
+    color: #d4af37;
 }
 
 /* News Section */
 .news-section {
     padding: 100px 20px;
-    background: #fff;
+    background: #1a1a1a;
+}
+
+.news-section .section-header h2 {
+    color: #d4af37;
+}
+
+.news-section .section-header p {
+    color: #cccccc;
 }
 
 .news-placeholder {
     text-align: center;
     padding: 60px 20px;
-    background: #f8f9fa;
+    background: #2d2d2d;
     border-radius: 15px;
     max-width: 600px;
     margin: 0 auto;
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .news-placeholder p {
-    color: #666;
+    color: #cccccc;
     font-size: 1.1rem;
     line-height: 1.7;
 }
 
-/* FAQ Section - POSICIONAMENTO CORRIGIDO */
+/* FAQ Section */
 .faq-section {
     padding: 100px 20px;
-    background: #f5f5f5;
-    margin-top: 0; /* Garantir que não sobreponha */
+    background: #f8f8f8;
+    margin-top: 0;
 }
 
 .faq-container {
@@ -541,25 +562,25 @@ a:focus, button:focus {
 
 .faq-item {
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
 }
 
 .faq-question {
     width: 100%;
     padding: 25px 30px;
-    background: #fff;
+    background: #ffffff;
     border: none;
     text-align: left;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #1a1a1a;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -568,12 +589,12 @@ a:focus, button:focus {
 }
 
 .faq-question:hover {
-    background: #f8f9fa;
+    background: #f8f8f8;
 }
 
 .faq-question[aria-expanded="true"] {
-    background: #f39c12;
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: #1a1a1a;
 }
 
 .faq-icon {
@@ -590,7 +611,7 @@ a:focus, button:focus {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: #f8f8f8;
 }
 
 .faq-answer.active {
@@ -601,7 +622,7 @@ a:focus, button:focus {
 .faq-answer p {
     margin-bottom: 15px;
     line-height: 1.7;
-    color: #555;
+    color: #333333;
 }
 
 .faq-answer p:last-child {
@@ -611,7 +632,15 @@ a:focus, button:focus {
 /* Contact Section */
 .contact-section {
     padding: 100px 20px;
-    background: #fff;
+    background: #1a1a1a;
+}
+
+.contact-section .section-header h2 {
+    color: #d4af37;
+}
+
+.contact-section .section-header p {
+    color: #cccccc;
 }
 
 .contact-content {
@@ -633,51 +662,53 @@ a:focus, button:focus {
     align-items: flex-start;
     gap: 20px;
     padding: 25px;
-    background: #fff;
+    background: #2d2d2d;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .contact-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
 }
 
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
+    background: linear-gradient(135deg, #d4af37, #b8941f);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #1a1a1a;
     flex-shrink: 0;
 }
 
 .contact-item h4 {
-    color: #2c3e50;
+    color: #d4af37;
     margin-bottom: 5px;
     font-weight: 600;
 }
 
 .contact-item p {
-    color: #666;
+    color: #cccccc;
     margin: 0;
 }
 
 .contact-item small {
-    color: #999;
+    color: #999999;
     font-size: 0.85rem;
 }
 
 /* Contact Form */
 .contact-form {
-    background: #fff;
+    background: #2d2d2d;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .form-group {
@@ -688,25 +719,27 @@ a:focus, button:focus {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #d4af37;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 2px solid #e9ecef;
+    border: 2px solid #4a4a4a;
     border-radius: 8px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     transition: all 0.3s ease;
+    background: #1a1a1a;
+    color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #f39c12;
-    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
 .form-group textarea {
@@ -714,23 +747,23 @@ a:focus, button:focus {
     min-height: 120px;
 }
 
-/* Map Section - ADICIONADA */
+/* Map Section */
 .map-section {
     padding: 100px 20px;
-    background: #f5f5f5;
+    background: #f8f8f8;
 }
 
 .map-section h2 {
     font-family: 'Merriweather', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #1a1a1a;
     text-align: center;
 }
 
 .map-section p {
     text-align: center;
-    color: #666;
+    color: #4a4a4a;
     margin-bottom: 40px;
     font-size: 1.1rem;
 }
@@ -741,6 +774,7 @@ a:focus, button:focus {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border: 3px solid #d4af37;
 }
 
 .map-container iframe {
@@ -749,10 +783,10 @@ a:focus, button:focus {
     border: none;
 }
 
-/* Footer - REDESENHADO CONFORME EXEMPLO */
+/* Footer */
 .footer {
-    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+    color: #ffffff;
     padding: 60px 0 30px;
 }
 
@@ -772,7 +806,7 @@ a:focus, button:focus {
 .footer-logo-img {
     height: 80px;
     width: auto;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(30deg);
 }
 
 .footer-center {
@@ -780,7 +814,7 @@ a:focus, button:focus {
 }
 
 .footer-section h4 {
-    color: #fff;
+    color: #d4af37;
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -799,6 +833,7 @@ a:focus, button:focus {
 .contact-icon-small {
     font-size: 1rem;
     width: 20px;
+    color: #d4af37;
 }
 
 .footer-right {
@@ -823,7 +858,7 @@ a:focus, button:focus {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
     padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -845,7 +880,7 @@ a:focus, button:focus {
 }
 
 .footer-menu a:hover {
-    color: #f39c12;
+    color: #d4af37;
 }
 
 .footer-social {
@@ -861,7 +896,7 @@ a:focus, button:focus {
 .footer-social img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(30deg);
     transition: all 0.3s ease;
 }
 
@@ -870,7 +905,7 @@ a:focus, button:focus {
 }
 
 .footer-social a:hover img {
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(30deg);
+    filter: brightness(0) invert(1) sepia(1) saturate(10) hue-rotate(30deg);
 }
 
 .footer-copyright {
@@ -882,7 +917,7 @@ a:focus, button:focus {
     font-size: 0.85rem;
 }
 
-/* WhatsApp Float */
+/* WhatsApp Float - ÍCONE RESTAURADO */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -915,9 +950,10 @@ a:focus, button:focus {
     width: 35px;
     height: 35px;
     object-fit: contain;
+    /* ÍCONE DO WHATSAPP RESTAURADO SEM FILTROS */
 }
 
-/* Responsive Design */
+/* Responsive Design - AJUSTADO PARA NOVA ALTURA DO HEADER */
 @media (max-width: 768px) {
     .nav-menu,
     .header-cta {
@@ -928,8 +964,21 @@ a:focus, button:focus {
         display: flex;
     }
     
+    .header {
+        min-height: 100px; /* ALTURA REDUZIDA NO MOBILE */
+    }
+    
+    .header-content {
+        padding: 15px 20px;
+        min-height: 100px;
+    }
+    
+    .logo-container .logo {
+        height: 80px; /* LOGO MENOR NO MOBILE */
+    }
+    
     .hero {
-        padding: 140px 20px 100px; /* MOBILE AJUSTADO */
+        padding: 140px 20px 100px; /* PADDING AJUSTADO PARA MOBILE */
         min-height: 90vh;
     }
     
@@ -996,8 +1045,21 @@ a:focus, button:focus {
         padding: 0 15px;
     }
     
+    .header {
+        min-height: 90px;
+    }
+    
+    .header-content {
+        padding: 10px 15px;
+        min-height: 90px;
+    }
+    
+    .logo-container .logo {
+        height: 70px; /* LOGO AINDA MENOR EM TELAS PEQUENAS */
+    }
+    
     .hero {
-        padding: 120px 15px 80px; /* MOBILE PEQUENO */
+        padding: 130px 15px 80px; /* PADDING AJUSTADO */
         min-height: 80vh;
     }
     
@@ -1070,11 +1132,11 @@ a:focus, button:focus {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(26, 26, 26, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 20px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
     
     .nav-menu.active .nav-links {
@@ -1105,8 +1167,8 @@ a:focus, button:focus {
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(26, 26, 26, 0.98);
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary, .btn-header {
@@ -1117,7 +1179,7 @@ a:focus, button:focus {
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(26, 26, 26, 0.3);
     transform: scale(0);
     animation: ripple-animation 0.6s linear;
     pointer-events: none;
@@ -1134,11 +1196,11 @@ a:focus, button:focus {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #8bc34a, #689f38);
-    color: white;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: #1a1a1a;
     padding: 15px 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(139, 195, 74, 0.3);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
     z-index: 10000;
     animation: slideInRight 0.5s ease-out;
 }
@@ -1162,12 +1224,12 @@ a:focus, button:focus {
 
 .form-group input.error,
 .form-group textarea.error {
-    border-color: #e74c3c;
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
 
 .error-message {
-    color: #e74c3c;
+    color: #d4af37;
     font-size: 0.85rem;
     margin-top: 5px;
 }
